@@ -1,11 +1,22 @@
 import 'package:angular2/core.dart';
 
+
 @Component(
-  selector: 'sidebar',
-  template: '''<div class="sidebar">
-                <ng-content></ng-content>
-            </div>'''
+  selector: 'od-sidebar',
+  templateUrl: 'sidebar-template.html'
 )
 class SidebarComponent {
+    List<String> items = [
+            'User',
+            'Sources',
+            'Variable',
+            'User Groups',
+            'Variable Groups'
+    ];
 
+    String selectedItem = "";
+
+    void onSelected(String item) {
+        this.selectedItem = item;
+    }
 }

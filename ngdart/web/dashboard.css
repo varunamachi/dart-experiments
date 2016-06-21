@@ -66,6 +66,10 @@ body {
   background-color: #428bca;
 }
 
+.navbar-toggle {
+    display: block;
+}
+
 
 /*
  * Main content
