@@ -16,7 +16,15 @@ class SidebarComponent {
 
     String selectedItem = "";
 
+    @Output("item-selected")
+    EventEmitter<String> itemSelected = new EventEmitter();
+
     void onSelected(String item) {
         this.selectedItem = item;
+        itemSelected.emit(selectedItem);
+    }
+
+    String getSeletedItem() {
+        return selectedItem;
     }
 }
