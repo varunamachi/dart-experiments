@@ -1,0 +1,18 @@
+  <div id = "od-app">
+      <od-header
+          (menuToggle) = "onSideBarToggle()">
+      </od-header>
+      <od-sidebar
+          [ngClass] = "sidebarVisible ? 'visible' : 'hidden'"
+          [(selected)] = "pageId">
+      </od-sidebar>
+      <od-content
+          [currentPageId] = "pageId"
+          [ngClass] = "sidebarVisible ? 'col-md-10
+                                         col-md-offset-2
+                                         main'
+                                      : 'col-md-12
+                                         col-md-offset-0
+                                         main'">
+      </od-content>
+  </div>

@@ -3,7 +3,7 @@ import 'package:angular2/core.dart';
 
 @Component(
   selector: 'od-sidebar',
-  templateUrl: 'sidebar-template.html'
+  templateUrl: 'sidebar_template.html'
 )
 class SidebarComponent {
     List<String> items = [
@@ -14,17 +14,8 @@ class SidebarComponent {
             'Variable Groups'
     ];
 
-    String selectedItem = "";
+    @Input("selected") String selectedItem = "";
 
-    @Output("item-selected")
-    EventEmitter<String> itemSelected = new EventEmitter();
-
-    void onSelected(String item) {
-        this.selectedItem = item;
-        itemSelected.emit(selectedItem);
-    }
-
-    String getSeletedItem() {
-        return selectedItem;
-    }
+    @Output("selectedChange")
+    EventEmitter<String> selectedItemChange = new EventEmitter();
 }

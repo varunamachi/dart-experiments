@@ -3,7 +3,7 @@
         <div class="col-sm-3 col-md-2 sidebar" id = "od-sidebar">
             <ul class="nav nav-sidebar">
                 <li *ngFor= "let item of items"
-                    (click)="onSelected(item)"
+                    (click)="selectedItemChange.emit(item); selectedItem = item"
                     [ngClass] = 'selectedItem == item ? "active" : "" ' >
                         <a href="#"> {{item}} </a>
                 </li>

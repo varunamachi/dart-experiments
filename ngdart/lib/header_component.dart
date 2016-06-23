@@ -3,7 +3,7 @@ import 'package:angular2/angular2.dart';
 
 @Component(
     selector: 'od-header',
-    templateUrl: 'header-template.html'
+    templateUrl: 'header_template.html'
 )
 class HeaderComponent {
     List<String> headerItems = [
